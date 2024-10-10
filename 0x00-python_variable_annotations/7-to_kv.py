@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """A module to create a tuple"""
 
-from typing import Union
+from typing import Union, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> tuple[str, float]:
+def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """A function to create a tuple
     Args:
         k(str): A string in the tuple
