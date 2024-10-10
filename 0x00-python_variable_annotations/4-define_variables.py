@@ -1,4 +1,4 @@
-#!/usr/binenv /python3
+#!/usr/bin/env python3
 """A module to define variables"""
 
 a: int = 1
