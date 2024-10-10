@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """A modulr to add a mixed list of intgers and floats"""
 
-from typing import Union
+from typing import Union, List
 
 
-def sum_mixed_list(mxd_lst: list[Union[int, float]]) -> float:
+def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     """A function to add a list of integers and floats
     Args:
         mxd_lst(list): A list of integers and floats
