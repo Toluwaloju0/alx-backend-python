@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """A modulr to add a mixed list of intgers and floats"""
 
 from typing import Union
