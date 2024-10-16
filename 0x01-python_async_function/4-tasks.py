@@ -13,4 +13,5 @@ async def task_wait_n(n: int, max_delay: int) -> typing.List[float]:
     for _ in range(n):
         task_list.append(await task_wait_random(max_delay))
 
-    return task_list
+    new_list: typing.List[float] = sorted(task_list)
+    return new_list
