@@ -6,7 +6,7 @@ from typing import Generator
 from random import uniform
 
 
-async def async_generator() -> Generator[float, None, None]: # type: ignore
+async def async_generator() -> Generator[float, None, None]:  # type: ignore
     """A function to create a generator number"""
 
     await asyncio.sleep(1)
