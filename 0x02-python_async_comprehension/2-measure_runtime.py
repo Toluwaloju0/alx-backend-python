@@ -2,7 +2,6 @@
 """A module to measure the runtime of a async function"""
 
 import asyncio
-# from typing import 
 import time
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
@@ -12,9 +11,7 @@ async def measure_runtime() -> float:
 
     async_list = [async_comprehension() for _ in range(4)]
 
-    async_list
-    time1: float = time.time()
+    time1: float = time.perf_counter()
     await asyncio.gather(*async_list)
-
-    time1 = time.time() - time1
-    return time1
+    time_2: float = time.perf_counter() - time1
+    return time_2

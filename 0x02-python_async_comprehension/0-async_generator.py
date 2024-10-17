@@ -9,7 +9,6 @@ from random import uniform
 async def async_generator() -> Generator[float, None, None]:  # type: ignore
     """A function to create a generator number"""
 
-    await asyncio.sleep(1)
-
     for _ in range(10):
+        await asyncio.sleep(1)
         yield uniform(0, 10)
