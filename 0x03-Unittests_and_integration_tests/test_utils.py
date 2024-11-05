@@ -14,6 +14,8 @@ class TestAccessNestedMap(unittest.TestCase):
 
         for key in path:
             nested_map = nested_map.get(key)
+            if nested_map is None:
+                raise KeyError(key)
         return nested_map
 
     @parameterized.expand([
@@ -25,3 +27,12 @@ class TestAccessNestedMap(unittest.TestCase):
         """The test to make sure the function works correctly"""
         self.assertEqual(access_nested_map(nested_map, path),
                          self.get_item(nested_map, path))
+
+    @parameterized.expand([
+        ({}, ("a")),
+        ({"a": 1}, ("a", "b"))
+    ])
+    def test_access_nested_map_exception(self, nested_map, path):
+        """A tests for in valid keys"""
+        with self.assertRaises(KeyError, msg=path):
+            access_nested_map(nested_map, path)
