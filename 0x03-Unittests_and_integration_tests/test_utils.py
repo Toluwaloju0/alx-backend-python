@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """A module to test the utils packsge"""
 
 import functools
