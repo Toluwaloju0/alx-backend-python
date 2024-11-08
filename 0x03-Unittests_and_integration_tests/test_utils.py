@@ -68,7 +68,7 @@ class TestMemoize(unittest.TestCase):
             @memoize
             def a_property(self):
                 return self.a_method()
-            
+
             @patch('self.a_method')
             def test_a_property(self, mocked_a_method):
                 """To test that a method is called once"""
