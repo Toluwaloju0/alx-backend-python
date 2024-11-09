@@ -47,3 +47,14 @@ github.com/orgs/google/repos"
             self.assertEqual(new_class._public_repos_url, "string")
             mock_repos_url.assert_called_once()
         new_class.public_repos
+
+    @parameterized.expand([
+        ({"license": {"key": "my_license"}}, "my_license", True),
+        ({"license": {"key": "other_license"}}, "my_license", False)
+    ])
+    def test_has_license(self, repo, licence_key, return_val):
+        """To test the static method has_license"""
+
+        self.assertEqual(
+            GithubOrgClient.has_license(repo=repo, license_key=licence_key),
+            return_val)
